@@ -257,15 +257,18 @@ header a{
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
+    margin-bottom: 2rem;
 }
 .btn{
     width: 8rem;
-    height: 4rem;
-    margin-bottom: 2rem;
+    height: 3rem;
     border: 2px solid #101010;
     color: #101010;
     background-color: #10101000;
     transition: 0.4s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
 }
 .btn:hover{
@@ -288,8 +291,7 @@ header a{
     margin-top: 5rem;
     margin-bottom: 4rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: 1fr;
     margin-left: 2rem;
     margin-right: 2rem;
     transform: translateY(50%);
@@ -310,9 +312,90 @@ header a{
     transform: scale(1.2);
 }
 .portfolio a{
-    width: 90%;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+.blog{
+    width: 100%;
+    height: auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     display: flex;
-    justify-content: end;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.textbox{
+    width: 60%;
+    height: auto;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.8s ease;
+}
+.contact{
+    width: 100%;
+    height: auto;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+.text{
+    width: 60%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    -moz-appearance: textfield;  
+    background-color: #eeeeee00; 
+    border: 1px solid #222;
+}
+input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.textcomment{
+    width: 60%;
+    padding-bottom: 5rem;
+    margin-bottom: 3rem;
+    background-color: #eeeeee00;
+    border: 1px solid #222;
+}
+.feedback{
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.socialmedia{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 5rem;
+    justify-content:center;
+    align-items: center;
+}
+.icon{
+    width: 2rem;
+    height: auto;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+.logosmall{
+    width: 10rem;
+    height: auto;
+    margin-top: 2rem;
 }
 footer{
     width: 100%;
@@ -387,6 +470,9 @@ footer{
     }
     .image-container{
         grid-template-columns: 1fr;
+    }
+    .textbox{
+        width: 80%;
     }
 }
 .nav-active{

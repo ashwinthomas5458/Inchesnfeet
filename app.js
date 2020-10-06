@@ -38,7 +38,8 @@ function navfade(){
 window.addEventListener('scroll', ()=>{
     navfade();
     scrollappear(".textcontainer");
-    scrollappear(".image-container")
+    scrollappear(".image-container");
+    scrollappear(".textbox");
 })
 
 const navSlide=()=>{
