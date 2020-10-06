@@ -3,6 +3,7 @@ const loader=document.querySelector('.loader');
 const nav=document.querySelector('.nav');
 const logo=document.querySelector('.logo');
 window.addEventListener('load', ()=>{
+    window.scrollTo(0,0)
     loader.classList.add('loaderremove');
     preloader.classList.add('preloaderremove');
     nav.classList.add('navactive');
@@ -20,7 +21,7 @@ function scrollappear(object){
         obj.classList.remove('objectappear');
     }
 }
-function navactive(){
+function navfade(){
     const mark=logo.offsetTop;
     const navbar=document.querySelector('header');
     const navname=document.querySelector('.navname');
@@ -35,7 +36,18 @@ function navactive(){
     }
 }
 window.addEventListener('scroll', ()=>{
-    loader.classList.add('loaderoff');
-    navactive();
+    navfade();
     scrollappear(".textcontainer");
+    scrollappear(".image-container")
 })
+
+const navSlide=()=>{
+    const icon=document.querySelector('.navicon')
+    const nav=document.querySelector('.nav')
+    const bar=document.querySelector('.navlist')
+    nav.addEventListener('click', ()=> {
+        bar.classList.toggle('nav-active')
+        icon.classList.toggle('x')
+    })
+}
+navSlide();

@@ -26,13 +26,9 @@
     transition: 1s ease-out 0.5s;
 }
 .loaderremove{
-    transform: translateY(162%);
     opacity: 0;
-    transition: 1s ease-out 0.5s;
+    transition: 1s ease-out 0.1s;
     animation: none;
-}
-.loaderoff{
-    display: none;
 }
 .loaderrem{
     display: none;
@@ -134,7 +130,8 @@ header{
     top: 0;
     left: 0;
     z-index: 2;
-    transition: 0.8s ease;
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
 }
 header a{
     text-decoration: none;
@@ -170,26 +167,42 @@ header a{
 }
 .navbaractive{
     background-color: #ffffff;
+    box-shadow: 2px 0 18px #0000002e;
 }
 .nav ul{
     width: auto;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .nav li{
     list-style: none;
     margin-left: 1rem;
 }
+.navicon {
+    width: auto;
+    height: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.navicon div{
+    width: 30px;
+    height: 3px;
+    background-color: #101010;
+    margin-right: 1rem;
+    transition: all 0.5s ease;
+}
 .main{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
+    overflow: hidden;
 }
 .cover{
     width: 100%;
@@ -239,15 +252,32 @@ header a{
     width: 40%;
     height: auto;
 }
-.objectappear{
-    opacity: 1;
-    transform: translateY(0);
+.main a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn{
+    width: 8rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+    border: 2px solid #101010;
+    color: #101010;
+    background-color: #10101000;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #eeeeee;
+    background-color: #101010;
+    border:2px solid #10101000;
 }
 .portfolio{
     width: 100%;
     height: auto;
     padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
     display: flex;
     background-color: #eeeeee;
     flex-direction: column;
@@ -255,31 +285,38 @@ header a{
     justify-content: center;
 }
 .image-container{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: 0.5s ease;
 }
 .box{
-    margin-top: 5rem;
     overflow: hidden;
 }
-.box img{
+.grey{
     width: 100%;
     height: auto;
-}
-.imagecol{
-    position: relative;
-    top: -50%;
-    opacity: 0;
-    transition: 0.8s ease;
+    transition: 0.3s ease-out;
     cursor: pointer;
 }
-.imagecol:hover{
-    opacity: 1;
+.grey:hover{
+    opacity: 70%;
+    transform: scale(1.2);
+}
+.portfolio a{
+    width: 90%;
+    display: flex;
+    justify-content: end;
 }
 footer{
     width: 100%;
-    color: #333333;
+    color: #666666;
     background-color: #010101;
     display: flex;
     align-items: center;
@@ -288,4 +325,80 @@ footer{
     padding-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
     font-size: 0.8rem;
+    font-weight: 600;
 }
+.objectappear{
+    opacity: 1;
+    transform: translateY(0);
+}
+@media screen and (max-width:700px){
+    .loaderlogo{
+        height: 12rem;
+    }
+    .navlist{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin:0;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+    .nav ul{
+        height: 100vh;
+        flex-direction: column;
+    }
+    .navicon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;       
+    }
+    .logo{
+        height: 50%;
+    }
+    .logoactive{
+        height: 40%;
+    }
+    .about{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .textcontainer{
+        width: 80%;
+        padding-left: 2rem;
+        font-size: 0.8rem;
+        margin-bottom: 4rem;
+    }
+    .about img{
+        width: 90%;
+        align-self: flex-start;
+    }
+    .portfolio{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .image-container{
+        grid-template-columns: 1fr;
+    }
+}
+.nav-active{
+    
+    transform: translateX(0);
+}
+.x .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.x .line2{
+    opacity: 0;
+}
+.x .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}  
