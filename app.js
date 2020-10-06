@@ -51,3 +51,13 @@ const navSlide=()=>{
     })
 }
 navSlide();
+
+var portfoliothumb=document.querySelectorAll('.grey');
+
+portfoliothumb.forEach(thumb =>{
+    thumb.addEventListener("click", ()=>{
+        var source=thumb.alt;
+        var loc="https://ashwinthomas5458.github.io/portfolio/"+source;
+        window.location.href=loc;
+    })
+})
