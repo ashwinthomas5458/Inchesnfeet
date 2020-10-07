@@ -103,7 +103,7 @@ header a{
 }
 .containeractive{
     width: 60%;
-    z-index: 10;
+    z-index: 6;
     transition: 0.6s ease-in-out;
 }
 .thumb{
@@ -115,16 +115,35 @@ header a{
 }
 .thumbactive{
     display: grid;
-    z-index: 10;
+    z-index: 6;
     cursor: pointer;
     transition: 0.6s ease-in-out;
+}
+.buttons{
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons button{
+    width: 3rem;
+    height: 4rem;
+    background-color: #0000007e;
+    border: none;
+}
+.buttons svg{
+    width: 1rem;
+    fill: #ffffff;
+}
+.buttons button:hover{
+    background-color: #000000c5;
 }
 .large{
     width: 100%;
 }
 .thumbnail{
     width: 100%;
-    opacity: 60%;
+    opacity: 40%;
     transition: 0.8s, ease;
 }
 .thumbnailactive{
@@ -143,11 +162,11 @@ header a{
 }
 @media screen and (max-width:700px){
     .containeractive{
-        width: 90%;
+        width: 100%;
     }
     .thumb{
         width: 90%;
-        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.2rem;
     }
     .main{
         font-size: 0.8rem;
@@ -155,5 +174,11 @@ header a{
     .textcontainer{
         width: 80%;
         padding-top: 1.5rem;
+    }
+    .buttonsactive{
+        display: flex;
+        position: relative;
+        z-index: 10;
+        bottom: 25%;
     }
 }
