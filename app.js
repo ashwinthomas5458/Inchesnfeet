@@ -22,15 +22,15 @@ function scrollappear(object){
     }
 }
 function navfade(){
-    const mark=logo.offsetTop;
+    var screenposition=window.innerHeight/2.1;
     const navbar=document.querySelector('header');
     const navname=document.querySelector('.navname');
 
-    if(window.pageYOffset<mark){
+    if(window.pageYOffset<screenposition){
         navbar.classList.remove('navbaractive');
         navname.classList.remove('navnameactive');
     }
-    if(window.pageYOffset>mark){
+    if(window.pageYOffset>screenposition){
         navbar.classList.add('navbaractive');
         navname.classList.add('navnameactive');
     }
