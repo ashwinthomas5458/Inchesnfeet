@@ -375,6 +375,9 @@ footer{
     }
     .cover{
         background-position-x: -34vh;
+        background-position-y: 20vh;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
     }
     .cover .logo,
     .covertext,
