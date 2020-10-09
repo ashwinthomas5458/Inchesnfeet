@@ -134,7 +134,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #000000cc, #00000000), url('images/cover.jpg');
+    background-image: linear-gradient(to top, #000000cc, #00000000), url('images/cover1.jpg');
     background-size: cover;
     background-position-x: center;
     background-position-y: top;
