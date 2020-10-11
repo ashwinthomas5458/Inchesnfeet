@@ -375,6 +375,9 @@ footer{
     }
     .cover{
         background-position-x: -34vh;
+        background-position-y: 20vh;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
     }
     .cover .logo,
     .covertext,
@@ -390,6 +393,7 @@ footer{
     .textcontainer{
         width: 80%;
         font-size: 0.8rem;
+        margin-bottom: 2rem;
     }
     .textbox{
         grid-template-columns: 0.3fr 1fr;
