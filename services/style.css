@@ -93,6 +93,12 @@
 .back{
     text-align: center;
     height: 16rem;
+    font-weight: 600;
+}
+.images{
+    max-width: 80%;
+    max-height: 80%;
+    margin-bottom: 1rem;
 }
 .cardcontainer:hover .card{
     transform: translateY(-50%);
@@ -166,6 +172,7 @@
     justify-content: center;
     text-align: center;
     border: 1px solid #aaaaaa;
+    box-shadow: 1px 1px 10px #00000030;
     margin-bottom: 2rem;
 }
 .socialmedia{
