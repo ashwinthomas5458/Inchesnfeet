@@ -117,3 +117,15 @@
         opacity: 1;
     }
 }
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    max-width: 60vw;
+    max-height: 60vh;
+}

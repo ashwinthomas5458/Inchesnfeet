@@ -44,7 +44,7 @@
     width: 80%;
     height: auto;
     margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -57,11 +57,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-bottom: 3rem;
+    
 }
 .row .textcontainer{
     width: 100%;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+}
+.mission{
+    margin-top: 6rem;
+}
+.missionicons{
+    height: 6rem;
+    margin-bottom: 2rem;
 }
 .crewcard{
     width: 100%;
@@ -127,8 +137,7 @@ footer{
 @media screen and (max-width:780px){
     .textcontainer{
         width: 90%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 6rem;
     }
     .row{
         width: 90%;
