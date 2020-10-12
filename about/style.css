@@ -17,6 +17,7 @@
     font-size: 1rem;
     overflow: hidden;
     background-color: #eeeeee;
+    padding-bottom: 5rem;
 }
 .cover{
     width: 100%;
@@ -30,7 +31,7 @@
     background-position-y: top;
 }
 .logo{
-    max-width: 70%;
+    max-width: 60%;
     max-height: 60%;
     opacity: 0;
 }
@@ -72,11 +73,13 @@
     background-color: #ffffff;
     box-shadow: 2px 2px 20px #00000040;
 }
+.crewcard .icon{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 .icon{
     width: 6rem;
     height: 6rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
@@ -85,17 +88,73 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 3rem;
+}
+.crewcard .socialmedia{
+    margin-top: 0;
 }
 .socialmedia .icon{
+    width: 2rem;
+    height: 2rem;
+}
+.crewcard .socialmedia .icon{
     width: 1.5rem;
     height: 1.5rem;
+}
+.logosmall{
+    width: 10rem;
+    height: auto;
+    margin-top: 2rem;
+}
+footer{
+    width: 100%;
+    color: #666666;
+    background-color: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 .scrollevent{
     opacity: 0;
     transform: translateY(30%);
     transition: 0.4s ease;
 }
+@media screen and (max-width:780px){
+    .textcontainer{
+        width: 90%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .row{
+        width: 90%;
+        grid-template-columns:  1fr;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .row .textcontainer{
+        width: 100%;
+    }
+    .socialmedia{
+        width: 100%;
+    }
+    .scrollevent{
+        transform: translateY(20%);
+    }
+}
 .objectappear{
     opacity: 1;
     transform: translateY(0);
+}
+.left{
+    text-align: left;
+    align-items: flex-start;
+}
+.right{
+    text-align: right;
+    align-items: flex-end;
 }
