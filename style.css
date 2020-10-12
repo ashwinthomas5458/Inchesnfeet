@@ -150,7 +150,7 @@
     margin-bottom: 0.5rem;
 }
 .covertext{
-    width: 70%;
+    width: 55%;
 }
 .logo{
     width: auto;
@@ -371,13 +371,14 @@ footer{
         height: 50%;
     }
     .logoactive{
-        height: 40%;
+        height: 30%;
     }
     .cover{
         background-position-x: -34vh;
-        background-position-y: 20vh;
+        background-position-y: bottom;
         background-repeat: no-repeat;
         background-color: #ffffff;
+        font-size: 0.9rem;
     }
     .cover .logo,
     .covertext,
@@ -389,6 +390,10 @@ footer{
         align-items: center;
         padding-top: 5rem;
         padding-bottom: 5rem;
+    }
+    .btn{
+        width: 7rem;
+        font-size: 0.8rem;
     }
     .textcontainer{
         width: 80%;
