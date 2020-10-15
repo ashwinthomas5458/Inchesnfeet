@@ -63,15 +63,22 @@
 }
 .row .textcontainer{
     width: 100%;
-    margin-bottom: 0rem;
-    margin-top: 0rem;
+    text-align: right;
+    align-items: flex-end;
+    margin: 0;
 }
 .mission{
+    grid-template-columns: 1.5fr 0.5fr; 
     margin-top: 6rem;
+    margin-bottom: 5rem;
+    grid-gap: 3rem;
+    align-items: flex-start;
 }
-.missionicons{
-    height: 6rem;
-    margin-bottom: 2rem;
+.mission h2{
+    margin-bottom: 1rem;
+}
+.mission p{
+    margin-bottom: 0.4rem;
 }
 .crewcard{
     width: 100%;
@@ -148,6 +155,12 @@ footer{
     .row .textcontainer{
         width: 100%;
     }
+    .mission{
+        margin-bottom: 2rem;
+    }
+    .mission img{
+        width: 60%;
+    }
     .socialmedia{
         width: 100%;
     }
@@ -158,12 +171,4 @@ footer{
 .objectappear{
     opacity: 1;
     transform: translateY(0);
-}
-.left{
-    text-align: left;
-    align-items: flex-start;
-}
-.right{
-    text-align: right;
-    align-items: flex-end;
 }

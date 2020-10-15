@@ -3,24 +3,11 @@ const navname=document.querySelector('.navname');
 const logo=document.querySelector('.logo');
 const text=document.querySelectorAll('.textcontainer');
 
-function mob(){
-    if(window.innerWidth<780){
-        for(j=0;j<3;j++){
-            if(j%2){
-                text[j].classList.add('left');
-            }
-            else{
-                text[j].classList.add('right');
-            }
-        }
-    }
-}
 window.addEventListener('load', ()=>{
     window.scrollTo(0,0)
     navname.classList.add('navnameactive')
     nav.classList.add('navactive');
     logo.classList.add('logoactive');
-    mob();
 })
 function scrollappear(object){
     var objects=document.querySelectorAll(object);
