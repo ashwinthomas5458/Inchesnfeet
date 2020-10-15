@@ -1,6 +1,8 @@
 const preloader=document.querySelector('.preloader');
 const loader=document.querySelector('.loader');
 const nav=document.querySelector('.nav');
+const navl=document.querySelectorAll('.navlinks');
+const items=document.querySelectorAll('.item')
 const logo=document.querySelector('.logo');
 window.addEventListener('load', ()=>{
     window.scrollTo(0,0)
@@ -29,10 +31,16 @@ function navfade(){
     if(window.pageYOffset<screenposition){
         navbar.classList.remove('navbaractive');
         navname.classList.remove('navnameactive');
+        navl.forEach(navli =>{
+            navli.classList.remove('navacta');
+        })
     }
     if(window.pageYOffset>screenposition){
         navbar.classList.add('navbaractive');
         navname.classList.add('navnameactive');
+        navl.forEach(navli =>{
+            navli.classList.add('navacta');
+        })
     }
 }
 window.addEventListener('scroll', ()=>{
