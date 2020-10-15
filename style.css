@@ -135,7 +135,7 @@ html{
 header a{
     color: #eeeeee;
 }
-.item{
+.navicon div{
     background-color: #eeeeee;
 }
 .navbaractive{
@@ -180,6 +180,100 @@ header a{
     opacity: 1;
     height: 50%;
     transition: 1s ease 1.1s;
+}
+.quote{
+    width: 100%;
+    height: 0.1rem;
+    display: none;
+    opacity: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #010101aa;
+    transition: 0.6s ease;
+}
+.quoteactive{
+    display: flex;
+    min-height: 100vh;
+    opacity: 1;
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.quotecard{
+    width: 40%;
+    min-height: 14rem;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.8s ease;
+}
+.quotecard:hover{
+    box-shadow: 2px 2px 20px #000000aa;
+}
+.quotecardactive{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    cursor: unset;
+}
+.qform{
+    width: 100%;
+    height: auto;
+    display: none;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+.qformactive{
+    display: flex;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+.quoteform{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: 2rem;
+}
+.qform input,
+.qform select{
+    width: 60%;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid #222222;
+    background-color: #00000000;
+}
+.qform label{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.note{
+    padding-bottom: 2rem;
+}
+.qform .btn{
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .about{
     width: 100%;
@@ -335,8 +429,10 @@ header a{
     width: 60%;
     height: 2rem;
     margin-bottom: 1rem;
-    -moz-appearance: textfield; 
     border: 1px solid #222;
+}
+input{
+    -moz-appearance: textfield; 
 }
 input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
     -webkit-appearance: none;
@@ -411,6 +507,21 @@ footer{
     .covertext{
         margin-right: 2rem;
         margin-left: 2rem;
+    }
+    .quote{
+        flex-direction: column;
+    }
+    .quotecard{
+        width: 80%;
+        min-height: 8rem;
+    }
+    .quotecardactive{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .qform input,
+    .qform select{
+        width: 80%;
     }
     .logo{
         height: 50%;
