@@ -71,10 +71,8 @@ header a{
     width: 30px;
     height: 3px;
     margin-right: 1rem;
-    transition: all 0.5s ease;
-}
-.item{
     background-color: #101010;
+    transition: all 0.5s ease;
 }
 @media screen and (max-width:700px){
     .navlist{

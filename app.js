@@ -52,10 +52,38 @@ window.addEventListener('scroll', ()=>{
 
 var portfoliothumb=document.querySelectorAll('.grey');
 
-portfoliothumb.forEach(thumb =>{
-    thumb.addEventListener("click", ()=>{
-        var source=thumb.alt;
-        var loc="https://ashwinthomas5458.github.io/Inchesnfeet/portfolio/"+source;
-        window.location.href=loc;
+function imagereroute(){
+    portfoliothumb.forEach(thumb =>{
+        thumb.addEventListener("click", ()=>{
+            var source=thumb.alt;
+            var loc="https://ashwinthomas5458.github.io/Inchesnfeet/portfolio/"+source;
+            window.location.href=loc;
+        })
     })
-})
+}
+imagereroute();
+
+function quoteaction(){
+    var quotebtn=document.querySelector('.getq');
+    var quote=document.querySelector('.quote');
+    var quotecard=document.querySelectorAll('.quotecard');
+    var qform=document.querySelectorAll('.qform')
+
+    quotebtn.addEventListener("click",()=>{
+        quote.classList.add('quoteactive');
+    } )
+    quotecard.forEach(card =>{
+        card.addEventListener("click", (x)=>{
+            var j=x.target.lastElementChild;
+            card.classList.add('quotecardactive');
+            console.log(j);
+            j.classList.add('qformactive');
+        })
+    })
+    quote.addEventListener("click", (y)=>{
+        if(y.target.classList.contains('quote')){
+            quote.classList.remove('quoteactive');
+        }
+    })
+}
+quoteaction();
