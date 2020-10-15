@@ -76,7 +76,7 @@ function quoteaction(){
         card.addEventListener("click", (x)=>{
             var cardform=x.target.lastElementChild;
             card.classList.add('quotecardactive');
-//             console.log(j);
+            console.log(cardform);
             cardform.classList.add('qformactive');
         })
     })
