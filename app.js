@@ -74,10 +74,10 @@ function quoteaction(){
     } )
     quotecard.forEach(card =>{
         card.addEventListener("click", (x)=>{
-            var j=x.target.lastElementChild;
+            var cardform=x.target.lastElementChild;
             card.classList.add('quotecardactive');
             console.log(j);
-            j.classList.add('qformactive');
+            cardform.classList.add('qformactive');
         })
     })
 
