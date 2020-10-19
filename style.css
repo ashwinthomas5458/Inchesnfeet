@@ -265,6 +265,9 @@ header a{
     margin-left: 2%;
     margin-right: 2%;
 }
+.qform input[type="file"]{
+    border: none;
+}
 .note{
     padding-bottom: 2rem;
 }
@@ -274,6 +277,9 @@ header a{
     margin-bottom: 2rem;
     margin-left: 2%;
     margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .about{
     width: 100%;
