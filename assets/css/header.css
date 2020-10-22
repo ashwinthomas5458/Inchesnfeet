@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
 header{
     width: 100%;
     height: auto;
@@ -40,6 +47,8 @@ header a{
     transition: 1s ease 1.4s;
 }
 .navname{
+    margin-left: 2rem;
+    margin-right: 2rem;
     opacity: 0;
     transition: 0.8s ease;
 }
