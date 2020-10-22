@@ -55,12 +55,12 @@ function btnClick(){
             var container=x.target.offsetParent.lastElementChild;
             var parent=x.target.offsetParent;
             container.classList.add('containeractive');
-            parent.classList.add('fixed');
+            parent.classList.add('ontop');
 
             container.addEventListener('click', (r)=>{
                 if(r.target.classList.contains('container')){
                         container.classList.remove('containeractive');
-                        parent.classList.remove('fixed');
+                        parent.classList.remove('ontop');
                 }
             })
         })
@@ -68,7 +68,25 @@ function btnClick(){
 }
 btnClick();
 
+let counter=0;
+function parallaxScroll(){
+    const parallax=document.querySelectorAll('.parallax');
+    let position=parallax[counter].getBoundingClientRect().top
+    if(position<0 && counter<2){
+        parallax[counter].classList.add(`fixed${counter}`);
+        counter++;
+    }
+    else if(position>(window.innerHeight+1) && counter>0){
+        parallax[counter-1].classList.remove(`fixed${counter-1}`);
+        counter--
+    }
+}
 window.addEventListener('scroll', ()=>{
     navfade();
-    scrollappear('.cardcontainer');
+    if(window.innerWidth<700){
+        parallaxScroll();
+    }
+    else{
+        scrollappear('.cardcontainer');
+    }
 })
