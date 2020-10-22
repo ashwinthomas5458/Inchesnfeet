@@ -117,15 +117,275 @@
         opacity: 1;
     }
 }
+.navnameactive,
+.navactive{
+    transition-delay: 2s;
+}
 .main{
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #eeeeee;
+    padding-bottom: 4rem;
 }
-img{
-    max-width: 60vw;
-    max-height: 60vh;
+.cover{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #000000aa, #00000000), url('../images/PorterResidency/Photo--1.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.4s ease-in 1.6s;
+}
+.coveron{
+    width: 96%;
+    height: 70vh;
+    margin-top: 3rem;
+    filter: grayscale(100%);
+}
+.cover:hover{
+    filter: grayscale(0);
+    transition-delay: 0s;
+}
+.parallax{
+    width: 96%;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main a{
+    text-decoration: none;
+    margin-top: 4rem;
+}
+.btn{
+    width: 10rem;
+    height: 4rem;
+    border: 2px solid #101010;
+    color: #101010;
+    background-color: #10101000;
+    transition: 0.4s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#arrow{
+    fill: #101010;
+    width: 0.8rem;
+    height: auto;
+    transition: 0.4s ease;
+}
+.btn:hover{
+    color: #eeeeee;
+    background-color: #101010;
+    border:2px solid #10101000;
+}
+.btn:hover #arrow{
+    fill: #eeeeee;
+}
+.parallax .btn{
+    border: 2px solid #eeeeee;
+    color: #eeeeee;
+    background-color: #eeeeee00;
+    display: none;
+}
+.parallax .btn:hover{
+    color: #101010;
+    background-color: #eeeeee;
+    border:2px solid #eeeeee00;
+}
+.container{
+    width: 100%;
+    height: auto;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardcontainer{
+    height: 18rem;
+    overflow: hidden;   
+    background-color: #ffffff;
+    box-shadow: 2px 2px 20px #001d2446 ;
+    opacity: 0;
+    transform: translateY(80%);
+    transition: 0.3s ease-in;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.card{
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s ease;
+}
+.images{
+    max-width: 80%;
+    max-height: 80%;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+.front{
+    position: relative;
+    top: -18rem;
+    color: #ffffff;
+    font-weight: 800;
+    background-color: #00000044;
+    opacity: 0;
+}
+.cardcontainer:hover .front{
+    opacity: 1;
+}
+.cardcontainer:hover .images{
+    filter: grayscale(0);
+}
+.socialmedia{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 5rem;
+    justify-content:center;
+    align-items: center;
+}
+.icon{
+    width: 2rem;
+    height: auto;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+.logosmall{
+    width: 10rem;
+    height: auto;
+    margin-top: 2rem;
+}
+footer{
+    width: 100%;
+    color: #666666;
+    background-color: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.objectappear{
+    opacity: 1;
+    transform: translateY(0);
+}
+@media screen and (max-width:1000px){
+    .container {
+        grid-template-columns: 45% 45%;
+    }
+}
+@media screen and (max-width:700px){
+    .cover{
+        font-size: 2rem;
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .container{
+        display: none;
+        justify-content: space-evenly;
+        align-items: unset;
+        height: 1vh;
+        opacity: 0;
+        background-color: #000000aa;
+        transition: 0.4s ease;
+    }
+    .container .cardcontainer:nth-child(even){
+        margin-top: 4rem;
+    }
+    .cardcontainer{
+        height: 8rem;
+        margin-bottom: 0;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .card{
+        height: 8rem;
+    }
+    .front{
+        top: -8rem;
+        font-size: 0.8rem;
+    }
+    .containeractive{
+        display: grid;
+        width: 100%;
+        min-height: 100vh;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        overflow-y: scroll;
+    }
+    .parallax{
+        font-size: 2rem;
+        width: 100%;
+        height: 100vh;
+        padding-bottom: 0;
+        padding-top: 0;
+        align-items: center;
+        background-color: #101010;
+        color: #eeeeee;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(100%);
+        transition: 0.2s ease 1s;
+    }
+    .parallax:hover{
+        filter: grayscale(0);
+        transition-delay: 0s;
+    }
+    .parallax:nth-child(2){
+        background-image: linear-gradient(to top, #00000099, #00000000), url('../images/Briefing/Photo--1.jpg');
+        
+    }
+    .parallax:nth-child(3){
+        background-image: linear-gradient(to top, #00000099, #00000000), url('../images/PorterResidency/Photo--5.jpg');
+
+    }
+    .parallax:nth-child(4){
+        background-image: linear-gradient(to top, #00000099, #00000000), url('../images/int/Photo--6.jpg');
+
+    }
+    .btn{
+        width: 8rem;
+        font-size: 0.8rem;
+    }
+    .parallax .btn{
+        display: block;
+        width: 6rem;
+        height: 2rem;
+        margin-top: 2rem;
+    }
 }
