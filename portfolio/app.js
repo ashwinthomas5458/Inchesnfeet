@@ -53,11 +53,14 @@ function btnClick(){
     pBtn.forEach(btn =>{
         btn.addEventListener('click',(x)=>{
             var container=x.target.offsetParent.lastElementChild;
+            var parent=x.target.offsetParent;
             container.classList.add('containeractive');
+            parent.classList.add('fixed');
 
             container.addEventListener('click', (r)=>{
                 if(r.target.classList.contains('container')){
                         container.classList.remove('containeractive');
+                        parent.classList.remove('fixed');
                 }
             })
         })
