@@ -320,7 +320,6 @@ footer{
     transition-delay: 0.1s;
     }
     header{
-        z-index: 9;
         background-color: #010101;
         box-shadow: 2px 0 18px #0000002e;
     }
@@ -391,7 +390,7 @@ footer{
         background-repeat: no-repeat;
         background-size: cover;
         filter: grayscale(100%);
-        transition: ease-in;
+        transition: ease;
     }
     .parallax:hover{
         filter: grayscale(0);
