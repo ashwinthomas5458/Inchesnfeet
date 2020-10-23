@@ -390,7 +390,7 @@ footer{
         background-repeat: no-repeat;
         background-size: cover;
         filter: grayscale(100%);
-        transition: ease;
+        transition: 0.2s ease;
     }
     .parallax:hover{
         filter: grayscale(0);
