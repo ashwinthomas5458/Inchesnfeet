@@ -68,25 +68,28 @@ function btnClick(){
 }
 btnClick();
 
-let counter=0;
 function parallaxScroll(){
     const parallax=document.querySelectorAll('.parallax');
-    let position=parallax[counter].getBoundingClientRect().top
-    if(position<0 && counter<2){
-        parallax[counter].classList.add(`fixed${counter}`);
-        counter++;
-    }
-    else if(position>(window.innerHeight+1) && counter>0){
-        parallax[counter-1].classList.remove(`fixed${counter-1}`);
-        counter--
+    parallax.forEach(comp =>{
+        var top=comp.getBoundingClientRect().top;
+        if(top<window.innerHeight){
+            comp.style.backgroundPositionY=`${top*(-0.8)}px`;
+        }
+    })
+}
+function coverScroll(){
+    var ctop=cover.getBoundingClientRect().top;
+    if(ctop<0){
+        cover.style.backgroundPositionY=`${ctop*(-0.8)}px`;
     }
 }
 window.addEventListener('scroll', ()=>{
-    navfade();
     if(window.innerWidth<700){
+        coverScroll();
         parallaxScroll();
     }
     else{
+        navfade();
         scrollappear('.cardcontainer');
     }
 })
