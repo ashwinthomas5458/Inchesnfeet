@@ -68,7 +68,7 @@ function btnClick(){
 }
 btnClick();
 
-function parallaxScroll(){
+function parallaxScroll(distance){
     const parallax=document.querySelectorAll('.parallax');
     parallax.forEach(comp =>{
         var top=comp.getBoundingClientRect().top;
@@ -76,17 +76,14 @@ function parallaxScroll(){
             comp.style.backgroundPositionY=`${top*(-0.8)}px`;
         }
     })
-}
-function coverScroll(){
     var ctop=cover.getBoundingClientRect().top;
     if(ctop<0){
-        cover.style.backgroundPositionY=`${ctop*(-0.8)}px`;
+        cover.style.backgroundPositionY=`${distance*(0.8)}px`;
     }
 }
 window.addEventListener('scroll', ()=>{
     if(window.innerWidth<700){
-        coverScroll();
-        parallaxScroll();
+        parallaxScroll(window.scrollY);
     }
     else{
         navfade();
