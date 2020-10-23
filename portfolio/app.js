@@ -2,39 +2,13 @@ const preloader=document.querySelector('.preloader');
 const loader=document.querySelector('.loader');
 const nav=document.querySelector('.nav');
 const navname=document.querySelector('.navname');
-const cover=document.querySelector('.cover');
 window.addEventListener('load', ()=>{
     window.scrollTo(0,0)
     loader.classList.add('loaderremove');
     preloader.classList.add('preloaderremove');
     nav.classList.add('navactive');
     navname.classList.add('navnameactive');
-    cover.classList.add('coveron');
 })
-function scrollappear(object){
-    var objects=document.querySelectorAll(object);
-    var screenposition=window.innerHeight/1.1;
-    objects.forEach(obj =>{
-        var objposition=obj.getBoundingClientRect().top;
-        if(objposition<screenposition){
-        obj.classList.add('objectappear');
-        }
-        if(objposition>window.innerHeight){
-        obj.classList.remove('objectappear');
-        }
-    })
-}
-function navfade(){
-    var screenposition=window.innerHeight/2.1;
-    const navbar=document.querySelector('header');
-
-    if(window.pageYOffset<screenposition){
-        navbar.classList.remove('navbaractive');
-    }
-    if(window.pageYOffset>screenposition){
-        navbar.classList.add('navbaractive');
-    }
-}
 
 function cardAction(){
     const cards=document.querySelectorAll('.cardcontainer');
@@ -68,7 +42,7 @@ function btnClick(){
 }
 btnClick();
 
-function parallaxScroll(distance){
+function parallaxScroll(){
     const parallax=document.querySelectorAll('.parallax');
     parallax.forEach(comp =>{
         var top=comp.getBoundingClientRect().top;
@@ -76,17 +50,9 @@ function parallaxScroll(distance){
             comp.style.backgroundPositionY=`${top*(-0.8)}px`;
         }
     })
-    var ctop=cover.getBoundingClientRect().top;
-    if(ctop<0){
-        cover.style.backgroundPositionY=`${distance*(0.8)}px`;
-    }
 }
 window.addEventListener('scroll', ()=>{
-    if(window.innerWidth<700){
-        parallaxScroll(window.scrollY);
-    }
-    else{
-        navfade();
-        scrollappear('.cardcontainer');
+    if(window.innerWidth>700){
+        parallaxScroll();
     }
 })

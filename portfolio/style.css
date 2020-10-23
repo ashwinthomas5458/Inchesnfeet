@@ -117,9 +117,14 @@
         opacity: 1;
     }
 }
-.navnameactive,
-.navactive{
-    transition-delay: 2s;
+header{
+    background-color: #01010100;
+}
+header a{
+    color: #ffffff;
+}
+.navicon div{
+    background-color: #eeeeee;
 }
 .main{
     width: 100%;
@@ -128,7 +133,7 @@
     justify-content: center;
     align-items: center;
     background-color: #eeeeee;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
 }
 .cover{
     width: 100%;
@@ -143,12 +148,9 @@
     color: #ffffff;
     font-size: 3rem;
     font-weight: 700;
-    transition: 0.4s ease-in 1.6s;
-}
-.coveron{
-    width: 96%;
-    height: 70vh;
-    margin-top: 3rem;
+    transition: 0.4s ease-in;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     filter: grayscale(100%);
 }
 .cover:hover{
@@ -156,14 +158,33 @@
     transition-delay: 0s;
 }
 .parallax{
-    width: 96%;
-    height: auto;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    font-size: 2rem;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    background-color: #101010;
+    color: #eeeeee;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: ease;
+}
+.parallax:hover{
+    filter: grayscale(0);
+    transition-delay: 0s;
+}
+.parallax:nth-child(2){
+    background-image: linear-gradient(to top, #000000dd, #00000044), url('../images/Briefing/Photo--1.jpg');   
+}
+.parallax:nth-child(3){
+    background-image: linear-gradient(to top, #000000dd, #00000044), url('../images/PorterResidency/Photo--5.jpg');
+}
+.parallax:nth-child(4){
+    background-image: linear-gradient(to top, #000000dd, #00000044), url('../images/int/Photo--6.jpg');
 }
 .parallax h2{
     font-size: 2rem;
@@ -202,10 +223,13 @@
     fill: #eeeeee;
 }
 .parallax .btn{
+    width: 8rem;
+    height: 3rem;
     border: 2px solid #eeeeee;
     color: #eeeeee;
     background-color: #eeeeee00;
-    display: none;
+    display: block;
+    margin-top: 3rem;
 }
 .parallax .btn:hover{
     color: #101010;
@@ -214,43 +238,59 @@
 }
 .container{
     width: 100%;
-    height: auto;
+    height: 1vh;
+    opacity: 0;
     padding-top: 3rem;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    justify-content: space-between;
+    background-color: #000000;
+    display: none;
+    grid-template-columns: repeat(auto-fit, 30%);
+    justify-content: space-evenly;
     align-items: center;
+    transition: 0.5s ease;
+}
+.containeractive{
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0;
+    overflow-y: scroll;
 }
 .cardcontainer{
-    height: 18rem;
+    height: 16rem;
     overflow: hidden;   
-    background-color: #ffffff;
+    /* background-color: #ffffff;
     box-shadow: 2px 2px 20px #001d2446 ;
     opacity: 0;
-    transform: translateY(80%);
+    transform: translateY(80%); */
     transition: 0.3s ease-in;
     margin-bottom: 2rem;
     cursor: pointer;
 }
 .card{
     width: 100%;
-    height: 18rem;
+    height: 16rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
     transition: 0.5s ease;
 }
 .images{
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
     filter: grayscale(100%);
     transition: 0.3s ease;
 }
 .front{
     position: relative;
-    top: -18rem;
+    top: -16rem;
     color: #ffffff;
     font-weight: 800;
     background-color: #00000044;
@@ -302,55 +342,37 @@ footer{
     font-size: 0.8rem;
     font-weight: 600;
 }
-.objectappear{
+.ontop{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+/* .objectappear{
     opacity: 1;
     transform: translateY(0);
-}
+} */
 @media screen and (max-width:1000px){
     .container {
-        grid-template-columns: 45% 45%;
+        grid-template-columns: repeat(auto-fit, 45%);
     }
 }
 @media screen and (max-width:700px){
     .loaderlogo{
         height: 12rem;
     }
-    .navnameactive,
-    .navactive{
-    transition-delay: 0.1s;
-    }
-    header{
-        background-color: #010101;
-        box-shadow: 2px 0 18px #0000002e;
-    }
-    header a{
-        color: #eeeeee;
-    }
-    .navicon div{
-        background-color: #eeeeee;
-    }
     .main{
         padding: 0;
     }
     .cover{
-        font-size: 2rem;
-        width: 100%;
-        height: 100vh;
-        margin-top: 0;
-        background-repeat: no-repeat;
-        transition: ease 0s;
+        font-size: 1.6rem;
+        background-attachment: unset;
     }
-    .container{
-        display: none;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 1vh;
-        opacity: 0;
-        background-color: #000000aa;
-        transition: 0.4s ease;
+    .parallax{
+        font-size: 1rem;
     }
-    .container .cardcontainer:nth-child(even){
-        margin-top: 4rem;
+    .container .cardcontainer:nth-child(odd){
+        margin-top: 2rem;
     }
     .cardcontainer{
         height: 8rem;
@@ -365,52 +387,11 @@ footer{
         top: -8rem;
         font-size: 0.8rem;
     }
-    .containeractive{
-        display: grid;
-        width: 100%;
-        min-height: 100vh;
-        opacity: 1;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        padding: 0;
-        overflow-y: scroll;
-    }
-    .parallax{
-        font-size: 2rem;
-        width: 100%;
-        height: 100vh;
-        padding-bottom: 0;
-        padding-top: 0;
-        align-items: center;
-        background-color: #101010;
-        color: #eeeeee;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: grayscale(100%);
-        transition: ease;
-    }
-    .parallax:hover{
-        filter: grayscale(0);
-        transition-delay: 0s;
-    }
-    .parallax:nth-child(2){
-        background-image: linear-gradient(to top, #000000cc, #00000000), url('../images/Briefing/Photo--1.jpg');   
-    }
-    .parallax:nth-child(3){
-        background-image: linear-gradient(to top, #000000cc, #00000000), url('../images/PorterResidency/Photo--5.jpg');
-    }
-    .parallax:nth-child(4){
-        background-image: linear-gradient(to top, #000000cc, #00000000), url('../images/int/Photo--6.jpg');
-    }
     .btn{
         width: 8rem;
         font-size: 0.8rem;
     }
     .parallax .btn{
-        display: block;
         width: 6rem;
         height: 2rem;
         margin-top: 2rem;
@@ -419,11 +400,5 @@ footer{
         width: 100%;
         height: 100vh;
         background-color: #eeeeee;
-    }
-    .ontop{
-        position: fixed;
-        z-index: 9;
-        top: 0;
-        left: 0;
     }
 }
