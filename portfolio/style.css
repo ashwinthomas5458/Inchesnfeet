@@ -321,7 +321,14 @@ footer{
     }
     header{
         z-index: 9;
-        background-color: #ffffff;
+        background-color: #010101;
+        box-shadow: 2px 0 18px #0000002e;
+    }
+    header a{
+        color: #eeeeee;
+    }
+    .navicon div{
+        background-color: #eeeeee;
     }
     .main{
         padding: 0;
