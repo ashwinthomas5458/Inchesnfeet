@@ -443,6 +443,9 @@ input{
 input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
+input:placeholder-shown{
+    padding-left: 0.4rem;
+}
 .textcomment{
     width: 60%;
     padding-bottom: 5rem;
