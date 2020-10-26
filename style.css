@@ -374,10 +374,11 @@ header a{
     height: auto;
     transition: 0.3s ease-out;
     cursor: pointer;
+    filter: grayscale(100%);
 }
 .grey:hover{
-    opacity: 70%;
     transform: scale(1.2);
+    filter: grayscale(0);
 }
 .portfolio a{
     align-self: flex-end;
@@ -442,6 +443,9 @@ input{
 }
 input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
     -webkit-appearance: none;
+}
+input:placeholder-shown{
+    padding-left: 0.4rem;
 }
 .textcomment{
     width: 60%;

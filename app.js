@@ -48,7 +48,7 @@ function imagereroute(){
     portfoliothumb.forEach(thumb =>{
         thumb.addEventListener("click", ()=>{
             var source=thumb.alt;
-            var loc="https://ashwinthomas5458.github.io/Inchesnfeet/portfolio/"+source;
+            var loc="https://inchesnfeet.com/portfolio/"+source;
             window.location.href=loc;
         })
     })

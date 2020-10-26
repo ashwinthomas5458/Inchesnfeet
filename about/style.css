@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #00000040, #00000000), url("../images/cover1.jpg");
+    background-image: linear-gradient(to top, #0000006e, #00000000), url("../images/cover1.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: top;
@@ -99,6 +99,10 @@
     height: 6rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+}
+.rounded{
+    border-radius: 50%;
+    filter: grayscale(100%);
 }
 .socialmedia{
     width: 80%;
