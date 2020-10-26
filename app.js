@@ -72,6 +72,7 @@ function quoteaction(){
             cardform.classList.add('qformactive');
         })
     })
+
     quote.addEventListener("click", (y)=>{
         if(y.target.classList.contains('quote')){
             quote.classList.remove('quoteactive');
@@ -79,3 +80,4 @@ function quoteaction(){
     })
 }
 quoteaction();
+
