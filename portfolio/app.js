@@ -15,7 +15,7 @@ function cardAction(){
     cards.forEach(card =>{
         card.addEventListener('click', (y)=>{
             var location=y.target.previousElementSibling.firstElementChild.alt;
-            var loc="https://ashwinthomas5458.github.io/Inchesnfeet/portfolio/"+location;
+            var loc="https://inchesnfeet.com/portfolio/"+location;
             window.location.href=loc;
         })
     })

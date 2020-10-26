@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #00000040, #00000000), url("../images/cover1.jpg");
+    background-image: linear-gradient(to top, #0000006e, #00000000), url("../images/cover1.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: top;
