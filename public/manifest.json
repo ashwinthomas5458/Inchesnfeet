@@ -1,0 +1,8 @@
+{
+  "short_name": "Inches N Feet",
+  "name": "Inches N Feet",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
